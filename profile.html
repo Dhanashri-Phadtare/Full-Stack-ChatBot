@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="profile-card">
+
+    <div class="profile-avatar">
+        {{ current_user.username[0].upper() }}
+    </div>
+
+    <h2>{{ current_user.username }}</h2>
+
+    <p>Welcome to your profile</p>
+
+    <a href="/dashboard">
+        Back to Chat
+    </a>
+
+</div>
+
+{% endblock %}

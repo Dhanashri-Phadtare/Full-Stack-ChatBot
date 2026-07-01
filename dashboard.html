@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<div class="sidebar">
+  <h2 class="logo">AI Chat</h2>
+  <a href="/new-chat" class="nav-item">
+    <i class="fas fa-plus"></i> New Chat
+  </a>
+
+<div class="history-list">
+{% for chat in chats %}
+<a href="/chat/{{ chat.id }}"
+   class="nav-item">{{ chat.title }}</a>
+
+{% endfor %}
+</div>
+
+    <a href="/settings" class="nav-item">
+    <i class="fas fa-cog"></i> Settings
+  </a>
+
+  <!-- Logout at bottom -->
+  <div class="logout-container">
+    <a href="/logout" class="nav-item">  
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </a>
+    </form>
+  </div>
+  </div>
+ 
+<div class="chat-container">
+
+<div class="chat-header">
+
+    <div class="profile-section">
+
+    <div class="avatar">
+        {{ current_user.username[0].upper() }}
+    </div>
+
+    <div>
+        <h2>Hello</h2>
+        <p>{{ current_user.username }}</p>
+    </div>
+
+</div>
+    <div class="header-buttons">
+          <button id="themeToggle">🌙    </button>
+
+    </div>
+</div>
+
+    <div class="chat-box" id="chatBox">
+
+        <div class="bot-message">
+            Hello {{ current_user.username }} 👋 How can I help you today! 
+        </div>
+
+    <div class="quick-replies">
+        <button onclick="quickReply('hello')">Hello</button>
+        <button onclick="quickReply('help')">Help</button>
+        <button onclick="quickReply('how are you')">How are you?</button>
+    </div>
+      </div>
+    <div class="chat-input">
+
+        <input type="text" id="userInput" placeholder="Type your message...">
+
+        <button onclick="sendMessage()">Send</button>
+
+    </div>
+
+</div>
+
+{% endblock %}
