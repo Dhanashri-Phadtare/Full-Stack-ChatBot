@@ -160,15 +160,15 @@ The application includes:
 
 ## 📸 Screenshots
 
-You can add screenshots here after uploading the project.
-
-Example:
-
 screenshots/
-├── login.png
-├── register.png
-├── dashboard.png
-├── chat.png
+├── login.png =  <img width="1216" height="630" alt="login" src="https://github.com/user-attachments/assets/46116d21-5934-435b-845b-0a8c9d64fec3" />
+
+├── register.png = <img width="1180" height="571" alt="register" src="https://github.com/user-attachments/assets/46cceaf1-e102-4cf3-82c4-1692e6fa7248" />
+
+├── dashboard.png =<img width="1304" height="579" alt="dashboard1" src="https://github.com/user-attachments/assets/b8269ab6-c424-41b3-bc7a-cb0c2c8b9f7c" />
+
+├── chat.png = <img width="1320" height="591" alt="dashboard2" src="https://github.com/user-attachments/assets/3cc8800a-2bc0-47fa-b5a5-174af72f99a6" />
+
 └── profile.png
 
 ---
